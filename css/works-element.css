@@ -1,0 +1,244 @@
+.works-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.works {
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.works-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.work-img {
+    margin-right: 20px;
+    width: 230px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 8px;
+    border-color: #1a1a1a;
+}
+
+.works-right {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+.works-start {
+    padding-left: 10px;
+}
+
+.works-end {
+    padding-left: 10px;
+}
+
+.works-line {
+    background-color: #00ffff;
+    height: 35px;
+    width: 5px;
+    border-radius: 10px;
+}
+
+.work-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffff;
+    margin: 0;
+}
+
+.work-desc {
+    margin: 25px 0 0 0;
+    color: #ababab;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: left;
+}
+
+.work-function {
+    margin: 10px 0 10px 0;
+    color: #ababab;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.function-container {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #00ffff;
+    font-size: 10px;
+}
+
+.function-icon {
+    font-size: 9px;
+}
+
+.function {
+    margin: 0 0 0 10px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: bold;
+}
+
+.button-area {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.button-play {
+    transition: .5s ease;
+    margin-right: 10px;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    width: 40%;
+    background: transparent;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #37FF8B;
+    color: #37FF8B;
+}
+
+.button-play:hover {
+    transition: .5s ease;
+    border-color: #00ffff;
+    color: #00ffff;
+}
+
+.button-code {
+    transition: .5s ease;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    width: 40%;
+    background: transparent;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #f00974;
+    color: #f00974;
+}
+
+.button-code:hover {
+    transition: .5s ease;
+    border-color: #00ffff;
+    color: #00ffff;
+}
+
+.button-left {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-text {
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media (max-width: 1590px) {
+    .button-area {
+        flex-direction: column;
+    }
+
+    .button-play {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .button-code {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1180px) {
+    .works {
+        flex-direction: column;
+    }
+
+    .works-right {
+        margin-top: 20px;
+    }
+
+    .works-start {
+        display: none;
+    }
+
+    .works-end {
+        padding: 0;
+    }
+
+    .button-area {
+        flex-direction: row;
+    }
+
+    .button-play {
+        margin: 0;
+        width: 40%;
+    }
+
+    .button-code {
+        margin-left: 10px;
+        width: 40%;
+    }
+
+    @media (max-width: 688px) {
+        .work-img {
+            max-width: 130px;
+        }
+
+        .button-area {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button-play {
+            margin: 0 0 20px 0;
+            /* width: 100vw; */
+        }
+
+        .button-code {
+            margin: 0;
+            /* width: 100vw; */
+        }
+    }
+
+    @media (max-width: 428px) {
+        .works-left {
+            flex-direction: column;
+        }
+
+        .work-img {
+            max-width: 230px;
+            margin: 0 0 25px 0;
+        }
+    }
+}

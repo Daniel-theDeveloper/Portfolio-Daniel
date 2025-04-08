@@ -1,0 +1,587 @@
+* {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+
+    /*Colors*/
+    --background: #00001A;
+    --header: #0A0A36;
+    --headerMenu: #001433;
+    --primary: #37FF8B;
+    --secondary: #00FFFF;
+    --auxiliar: #F6FF00;
+    --emailContainer: #19184C;
+    --emailBottom: #5E5dCD;
+    --emailActive: #242454;
+    --text: #FFF;
+    --textSecondary: #ABABAB;
+    --tagLine: #595988;
+    --tagBackground: #22223B;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+    /* background-image: url("../src/fondo.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+section[id] {
+    scroll-margin-top: 70px;
+    width: 60%;
+}
+
+.header {
+    min-height: 63px;
+    padding: 10px 2em;
+    background-color: var(--header);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.header .h1 .a {
+    color: var(--primary);
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.header .open-menu,
+.close-menu {
+    display: none;
+}
+
+.header .ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .li {
+    margin-left: 2em;
+}
+
+.header .li .a {
+    min-width: 15px;
+    color: var(--text);
+    display: block;
+    margin: 10;
+    text-transform: uppercase;
+}
+
+.header .li .a:hover {
+    transition: 0.8s;
+    color: var(--primary);
+    width: 100%;
+    text-shadow: 0 0 22px var(--primary);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inicio {
+    min-height: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: -1em;
+    margin-bottom: -1em; */
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.img {
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+}
+
+.name {
+    color: var(--secondary);
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.level {
+    color: var(--text);
+    font-size: 25px;
+    margin-top: -40px;
+}
+
+.buttons-block {
+    display: flex;
+    flex-direction: row;
+}
+
+.cv {
+    transition: .3s;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: transparent;
+    padding: 10px;
+    width: 50%;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.inicio .cv:hover {
+    transition: .3s;
+    background-color: var(--primary);
+    color: #000;
+}
+
+.inicio .cv-text {
+    transition: .5s;
+    margin: 0 5px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.more {
+    transition: .3s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: transparent;
+    padding: 10px;
+    width: 50%;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--secondary);
+    color: var(--secondary);
+}
+
+.inicio .more:hover {
+    transition: .3s;
+    background-color: var(--secondary);
+    color: #000;
+}
+
+.inicio .more-text {
+    transition: .5s;
+    margin: 0 5px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.inicio .email-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: var(--emailContainer);
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--emailBottom);
+}
+
+.email {
+    margin: 0;
+    padding: 12px;
+    color: var(--text);
+    font-size: 17px;
+}
+
+.email-copy {
+    transition: .5s;
+    padding: 12px 20px;
+    background-color: var(--emailBottom);
+    color: var(--text);
+    border-radius: 0 3px 3px 0;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.email-copy:hover {
+    transition: .5s;
+    color: var(--auxiliar);
+    cursor: pointer;
+}
+
+.email-copy:active {
+    transition: .3s;
+    background-color: var(--emailActive);
+    color: var(--secondary);
+    cursor: pointer;
+}
+
+.acerca_de {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.title {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    color: var(--primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.subtitle {
+    text-align: left;
+    width: 100%;
+    color: var(--secondary);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about_title {
+    color: var(--secondary);
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.about_description {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: left;
+    color: var(--textSecondary);
+}
+
+.point {
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: 8px;
+    color: var(--primary);
+}
+
+.vignette {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--text);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-me {
+    color: var(--text);
+    text-align: left;
+}
+
+.about-me-title {
+    font-size: 30px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: var(--primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.about-left {
+    width: 8px;
+    height: 70px;
+    margin-right: 20px;
+    background-color: var(--primary);
+    border-radius: 5px;
+}
+
+.tag-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.tag {
+    transition: .5s;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--tagBackground);
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--tagLine);
+}
+
+.tag:hover {
+    transition: .5s;
+    border-color: var(--secondary);
+}
+
+.tag-text {
+    color: var(--text);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.tag-icon {
+    height: 18px;
+    width: 18px;
+    margin-right: 10px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.skills-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% auto;
+}
+
+.skills-left {
+    margin-right: 60px;
+}
+
+.languages {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.languages .img {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+}
+
+.language-block {
+    width: 120px;
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.language-name {
+    margin: 10px 0;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.experience {
+    padding-bottom: 55px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.exp-block {
+    display: flex;
+    flex-direction: row;
+}
+
+.exp-title {
+    margin: 0;
+    text-align: start;
+    color: var(--text);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.exp-type {
+    text-align: start;
+    color: var(--text);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.exp-time {
+    text-align: start;
+    color: var(--secondary);
+    font-size: 18px;
+}
+
+.trabajos {
+    padding-bottom: 55px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+@media (max-width: 1253px) {
+
+    .header .nav,
+    .ulOpened {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        padding-left: 0;
+        left: 0;
+        top: 90px;
+        width: 100%;
+        align-items: center;
+        background-color: var(--headerMenu);
+        overflow-y: auto;
+    }
+
+    .header .ul {
+        display: contents;
+    }
+
+    .header .ulOpened {
+        display: flex;
+        align-items: center;
+        pointer-events: all;
+    }
+
+    .header .li {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .header .open-menu,
+    .close-menu {
+        height: 60px;
+        width: 60px;
+        display: block;
+        border: none;
+        background: none;
+        cursor: pointer;
+        align-self: flex-end;
+    }
+
+    .header .open-menu {
+        display: block;
+    }
+
+    .header .close-menu {
+        display: none;
+    }
+
+    .header .menu_buttom_open,
+    .menu_buttom_close {
+        height: 30px;
+        width: 30px;
+        filter: invert(100%);
+    }
+
+    .skills-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills-left {
+        margin: 0;
+    }
+}
+
+@media (max-width: 1350px) {
+    .inicio {
+        min-height: auto;
+        padding-top: 190px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .inicio .section {
+        margin: 70px 0;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 726px) {
+    .main {
+        padding: 20px;
+    }
+
+    section[id] {
+        scroll-margin-top: 70px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 472px) {
+    .name {
+        margin-bottom: 7px;
+        font-size: 40px;
+    }
+
+    .level {
+        margin: 0 0 20px 0;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 430px) {
+    .header .h1 .a {
+        font-size: 30px;
+    }
+
+    .email {
+        font-size: 14px;
+    }
+
+    .email-copy {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .buttons-block {
+        flex-direction: column;
+    }
+
+    .cv {
+        margin: 0 0 10px 0;
+        width: auto;
+    }
+
+    .more {
+        width: auto;
+    }
+}
