@@ -303,6 +303,7 @@ section[id] {
 }
 
 .about-me {
+    margin: 0 0 15px 0;
     color: var(--text);
     text-align: left;
 }
