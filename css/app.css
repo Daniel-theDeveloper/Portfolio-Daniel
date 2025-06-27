@@ -113,6 +113,7 @@ section[id] {
     display: flex;
     flex-direction: column;
     text-align: left;
+    width: 428px;
 }
 
 .img {

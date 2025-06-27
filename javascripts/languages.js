@@ -1,4 +1,4 @@
-import translation from "./translation.js";
+import translation from "../i18n/translation.js";
 
 var userLang = navigator.language.slice(0, 2);
 const btnlanguage = document.querySelector(".language");
